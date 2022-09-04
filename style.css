@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@1,300&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    overflow-x: hidden;
+}
+
+header {
+    width: 100%;
+    height: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: #f3fcf4; */
+}
+
+.divImg {
+    width: 12%;
+    margin: 1rem;
+}
+
+.logo01 {
+    width: 180px;
+}
+
+h1 {
+    padding: 5rem;
+    font-family: 'PT Serif', serif;
+    font-size: 4rem;
+    color: #57652a;
+}
+
+a {
+    position: relative;
+    transform: translateY(40px);
+}
+
+a::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background: #57652a;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    transition: 0.2s linear;
+}
+
+a:hover::before {
+    width: 100%;
+}
+
+nav > ul > a {
+    margin: 1rem;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #5c6835;
+    text-decoration: none;
+}
+
+.slider{
+    width: 100%;
+    height: 600px;
+    overflow: hidden;
+}
+
+.slider ul{
+    display: flex;
+    animation: cambio 20s infinite alternate linear;
+    width: 400%;
+}
+
+.slider li{
+    width: 100%;
+    list-style: none;
+}
+
+.slider img{
+    width: 100%;
+    height: 100%;
+}
+
+@keyframes cambio{
+    0%{margin-left: 0;}
+    20%{margin-left: 0;}
+      
+    25%{margin-left: -100%;}
+    45%{margin-left: -100%;}
+      
+    50%{margin-left: -200%;}
+    70%{margin-left: -200%;}
+      
+    75%{margin-left: -300%;}
+    100%{margin-left: -300%;}
+}
+
+@media only screen and (min-width:320px) and (max-width:768px) {
+  .slider, .slider ul, .slider img {
+    height: 100vh;
+}
+}
